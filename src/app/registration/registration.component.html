@@ -1,0 +1,117 @@
+<div class="container-fluid" id="container" style="background-image: url(../../assets/bg\ img\ full.jpg);">
+    <h2>Covid Vaccination System</h2>
+    <br>
+    <p>For some COVID-19 vaccines, two doses are required. It’s important to get the second dose if the vaccine requires two doses. <br> For vaccines that require two doses, the first dose presents antigens – proteins that stimulate the production of <br> antibodies – to  the immune system for the first time. Scientists call this priming the immune response. The <br> second dose acts as a booster, ensuring the immune system develops a memory response <br> to fight off the virus if it encounters it again.</p>
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Candidate</button>
+  
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Registration Form</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form class="/action_page.php">
+              <div class="input body">
+                <label for="name">Name :</label>
+                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" [(ngModel)]="name">
+                <br>
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" placeholder="Enter Your Email" name="email" [(ngModel)]="email">
+                <br>
+                <label for="number">Number :</label>
+                <input type="text" class="form-control" placeholder="Enter Your Number" name=" Number" [(ngModel)]="number">
+                <br>
+                <label for="address">Address :</label>
+                <input type="address" class="form-control" placeholder="Enter Your Address" name="address" [(ngModel)]="address">
+              </div>
+            </form>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" [disabled]=" name === '' " (click)="submit()">Submit</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- 1st table -->
+      <div class="col-lg-4" id="first">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr. no.</th>
+              <th>Name</th>
+              <th class="action">Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of candidate1, let i=index">
+            <tr>
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="dose(i)">Dose 1</button> 
+                <button type="button" class="btn btn-danger" (click)="delete(i)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <!-- 2nd table -->
+      <div class="col-lg-4" id="second">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr. no.</th>
+              <th>Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of candidate2, let i=index">
+            <tr>
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="dose2(i)">Dose 2</button> &nbsp;
+                <button type="button" class="btn btn-danger" (click)="delete2(i)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <!-- 3rd table -->
+      <div class="col-lg-4" id="third">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr. no.</th>
+              <th>Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of candidate3, let i=index">
+            <tr>
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <td>
+                <!-- <button type="button" class="btn btn-primary">Dose 1</button>  -->
+                <button type="button" class="btn btn-danger" (click)="delete3(i)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

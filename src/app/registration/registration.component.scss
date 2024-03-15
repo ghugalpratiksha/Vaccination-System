@@ -1,0 +1,65 @@
+h2, p{
+    text-align: center;
+}
+
+button{
+    justify-content: center;
+    margin-left: 45%;
+}
+
+.container-fluid{
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.row{
+    padding-top: 30px; 
+    padding-bottom: 150px;
+}
+
+th, td{
+    border: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.modal-header, .modal-footer{
+    border: 1px solid black;
+}
+
+label{
+    font-weight: 600;
+}
+
+.btn{
+    border-radius: 20px;
+}
+
+.btn-primary{
+    border: 1px solid black;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    color: white;
+}
+
+.action{
+    text-align: center;
+}
+
+.btn-success{
+    margin-left: 10px;
+}
+
+.btn-danger{
+    margin-left: 5px;
+}
+
+// #container{
+//     background-image: url(../../assets/bg\ img.avif);
+// }

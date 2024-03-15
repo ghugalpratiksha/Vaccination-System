@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Vaccination-System';
+  // heading = "Welcome To Our Page"
+  // imgUrl = "/assets/logo.jpeg";
+
 }

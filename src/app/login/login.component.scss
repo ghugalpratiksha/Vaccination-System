@@ -1,0 +1,43 @@
+h3{
+    text-align: center;
+    // color: #fff;
+}
+
+.row{
+    justify-content: center;
+    text-align: center;
+    margin-left: 420px;
+    margin-right: 420px;
+    border: 2px solid black;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-top: -15px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.btn-dark{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: black;
+    font-weight: 600
+}
+
+.btn-dark:hover{
+    background-image: linear-gradient(to right, #f9c929 0%, #9f025e 51%, #f9c929 100%);
+}
+
+.container-fluid{
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-image: url('../../assets/bg\ img\ full.jpg');
+}
+input{
+    border: 0.5px solid grey;
+    border-radius: 20px;
+    // background-image: linear-gradient(to right, #f9c929 0%, #9f025e 51%, #f9c929 100%);
+
+}

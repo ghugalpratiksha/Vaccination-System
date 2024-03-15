@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <form class="/action_page.php">
+      <div class="row">
+        <h3>Login Form</h3>
+        <div class="col-lg-12">
+          <br>
+          <br>
+          <input type="email" class="form-control" placeholder="Enter Your email" [(ngModel)]="email">
+          <br>
+          <br>
+          <input type="password" class="form-control" placeholder="Enter Your Password" [(ngModel)]="password">
+          <br>
+          <br>
+          <button type="button" class="btn btn-dark" [disabled]="email == '' || password==''" (click)="login()">Submit Now</button>
+        </div>
+      </div>
+    </form>
+  </div>
